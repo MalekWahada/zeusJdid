@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="582.0" prefWidth="957.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templateProfile.profileController">
+   <children>
+      <AnchorPane layoutX="-6.0" layoutY="-1.0" prefHeight="53.0" prefWidth="907.0" style="-fx-background-color: #161626;">
+         <children>
+            <AnchorPane prefHeight="64.0" prefWidth="964.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="123.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/zeus.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="homeImg" fitHeight="45.0" fitWidth="56.0" layoutX="416.0" layoutY="11.0" onMouseClicked="#homeImgClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/homeWh.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="inboxImg" fitHeight="45.0" fitWidth="45.0" layoutX="483.0" layoutY="11.0" onMouseClicked="#inboxImgClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/messageWh.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="jobOfferImg" fitHeight="45.0" fitWidth="45.0" layoutX="557.0" layoutY="11.0" onMouseClicked="#jobOfferImgClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/jobsWh.png" />
+                     </image>
+                  </ImageView>
+                  <JFXTextField fx:id="searchTF" layoutX="190.0" layoutY="19.0" prefHeight="25.0" prefWidth="172.0" style="-fx-text-fill: #ffffff;" />
+                  <ImageView fx:id="notifImg" fitHeight="45.0" fitWidth="45.0" layoutX="619.0" layoutY="9.0" onMouseClicked="#notifImgClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/notifWh.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="contactImg" fitHeight="45.0" fitWidth="45.0" layoutX="755.0" layoutY="11.0" onMouseClicked="#contactImgAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/friendWh.png" />
+                     </image>
+                  </ImageView>
+                  <MenuButton fx:id="dropDownProfile" layoutX="875.0" layoutY="21.0" mnemonicParsing="false" style="-fx-background-color: #80ccff;" text=" ">
+                    <items>
+                      <MenuItem fx:id="seeProfileAction" mnemonicParsing="false" text="see profile" />
+                      <MenuItem fx:id="jobApplications" mnemonicParsing="false" onAction="#jobApplicationsAction" text="See job Applications" />
+                        <MenuItem fx:id="logOut" mnemonicParsing="false" onAction="#logOutAction" text="Log Out" />
+                    </items>
+                  </MenuButton>
+                  <Circle fx:id="profileImg" fill="#becedd" layoutX="854.0" layoutY="35.0" onMouseClicked="#profileImgAction" radius="27.0" stroke="BLACK" strokeType="INSIDE" />
+                  <ImageView fitHeight="24.0" fitWidth="30.0" layoutX="166.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/searchWh.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="statImg" fitHeight="45.0" fitWidth="54.0" layoutX="689.0" layoutY="9.0" onMouseClicked="#statImgAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/statWh.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

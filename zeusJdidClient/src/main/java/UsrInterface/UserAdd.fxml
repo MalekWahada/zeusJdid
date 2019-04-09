@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="370.0" prefWidth="403.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UsrInterface.UserAddController">
+   <children>
+      <TextField fx:id="firstNameTF" layoutX="127.0" layoutY="59.0" promptText="first name" />
+      <TextField fx:id="lastNameTF" layoutX="127.0" layoutY="105.0" promptText="last name" />
+      <Button fx:id="addUserBtn" layoutX="127.0" layoutY="173.0" mnemonicParsing="false" onAction="#addUser" prefHeight="25.0" prefWidth="105.0" text="add" />
+   </children>
+</AnchorPane>
