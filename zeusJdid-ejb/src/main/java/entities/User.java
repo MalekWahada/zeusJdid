@@ -25,10 +25,13 @@ public class User implements Serializable {
 	private String Lastname;
 	private Date BirthDate;
 	private String bio;
-	private String AccountConfirmation;
+	private String CodeActivation;
+	private boolean AccountConfirmation;
 	private String PictureURL;
 	private String ActualOccupation;
 	private String entreschool;
+	private String pays;
+	private String ville;
 	@OneToMany(mappedBy = "user",orphanRemoval=true,cascade=CascadeType.ALL,fetch=FetchType.EAGER)
 	private List<Skill> Skills;
 	@OneToMany(mappedBy = "user",orphanRemoval=true,cascade=CascadeType.ALL,fetch=FetchType.EAGER)
@@ -38,15 +41,19 @@ public class User implements Serializable {
 	private List<Friend> friendsents;
     @OneToMany(mappedBy="friendreciver",orphanRemoval=true,cascade=CascadeType.ALL,fetch=FetchType.EAGER)
 	private List<Friend> friendrecivers;
-    @OneToMany(mappedBy="user",orphanRemoval=true,cascade=CascadeType.ALL)
+    @OneToMany(mappedBy="user",orphanRemoval=true,cascade=CascadeType.ALL,fetch=FetchType.EAGER)
     private List<Education> educations;
-    @OneToMany(mappedBy="user",orphanRemoval=true,cascade=CascadeType.ALL)
+    @OneToMany(mappedBy="user",orphanRemoval=true,cascade=CascadeType.ALL,fetch=FetchType.EAGER)
     private List<certification> certifications;
-	@OneToMany(mappedBy = "Vieweruser",orphanRemoval=true,cascade=CascadeType.ALL)
+	@OneToMany(mappedBy = "Vieweruser",orphanRemoval=true,cascade=CascadeType.ALL,fetch=FetchType.EAGER)
 	private List<View> viewerusers;
-    @OneToMany(mappedBy="Vieweduser",orphanRemoval=true,cascade=CascadeType.ALL)
+    @OneToMany(mappedBy="Vieweduser",orphanRemoval=true,cascade=CascadeType.ALL,fetch=FetchType.EAGER)
 	private List<View> viewedusers;	
 
+	////////////////////////////////////////////entreprise///////////////////////////////////
+	@OneToMany(mappedBy = "user",orphanRemoval=true,cascade={CascadeType.PERSIST,CascadeType.ALL},fetch=FetchType.EAGER)
+	private List<Follow> listFollow;
+    
 	/// malek mapped entities///////////////////
 
 	//// post & comments
@@ -69,8 +76,7 @@ public class User implements Serializable {
 
 	///////////////   amine mapped entities  ///////////
 	
-	@OneToMany(mappedBy = "user")
-	private List<Follow> listFollow;  //
+	
 	@OneToMany(mappedBy = "user")
 	private List<Application> listApplication; 
 	@OneToMany(mappedBy = "user")
@@ -161,9 +167,7 @@ public class User implements Serializable {
 	///////////////////////////////////////
 	private static final long serialVersionUID = 1L;
 
-	public User() {
-		super();
-	}
+	
 
 	public Integer getId() {
 		return this.Id;
@@ -221,11 +225,11 @@ public class User implements Serializable {
 		this.bio = bio;
 	}
 
-	public String getAccountConfirmation() {
+	public boolean getAccountConfirmation() {
 		return this.AccountConfirmation;
 	}
 
-	public void setAccountConfirmation(String AccountConfirmation) {
+	public void setAccountConfirmation(boolean AccountConfirmation) {
 		this.AccountConfirmation = AccountConfirmation;
 	}
 
@@ -317,10 +321,46 @@ public class User implements Serializable {
 		this.lNotificationsReceived = lNotificationsReceived;
 	}
 
+	public String getCodeActivation() {
+		return CodeActivation;
+	}
+
+	public void setCodeActivation(String codeActivation) {
+		CodeActivation = codeActivation;
+	}
+
+	public String getPays() {
+		return pays;
+	}
+
+	public void setPays(String pays) {
+		this.pays = pays;
+	}
+
+	public String getVille() {
+		return ville;
+	}
+
+	public void setVille(String ville) {
+		this.ville = ville;
+	}
+
+	public User() {
+		super();
+		AccountConfirmation=false;
+	this.ActualOccupation="";
+	this.entreschool="";
+	}
+
+	
+	
 	@Override
 	public String toString() {
 		return "User [Id=" + Id + ", Email=" + Email + ", Password=" + Password + ", Firstname=" + Firstname
-				+ ", Lastname=" + Lastname + ", bio=" + bio + "]";
+				+ ", Lastname=" + Lastname + ", BirthDate=" + BirthDate + ", bio=" + bio + ", CodeActivation="
+				+ CodeActivation + ", AccountConfirmation=" + AccountConfirmation + ", PictureURL=" + PictureURL
+				+ ", ActualOccupation=" + ActualOccupation + ", entreschool=" + entreschool + ", Skills=" + Skills
+				+ "]";
 	}
 
 }

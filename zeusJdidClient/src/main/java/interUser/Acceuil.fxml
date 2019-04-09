@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="518.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interUser.AcceuilController">
+   <children>
+      <ImageView fitHeight="530.0" fitWidth="758.0" layoutX="1.0" opacity="0.78" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/job.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="login" layoutX="607.0" layoutY="14.0" mnemonicParsing="false" onAction="#LoginAction" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: silver;" text="Sign In" />
+      <TextField fx:id="passlogin" editable="false" layoutX="581.0" layoutY="469.0" promptText="password" visible="false" />
+      <TextField fx:id="emaillog" layoutX="265.0" layoutY="18.0" promptText="Email" />
+      <TextField fx:id="firstname" layoutX="21.0" layoutY="43.0" promptText="First Name" />
+      <TextField fx:id="lastname" layoutX="21.0" layoutY="75.0" promptText="Last Name" />
+      <TextArea fx:id="bio" layoutX="15.0" layoutY="294.0" prefHeight="68.0" prefWidth="167.0" promptText="Say somthing about you ..." />
+      <DatePicker fx:id="birthday" layoutX="20.0" layoutY="166.0" prefHeight="25.0" prefWidth="149.0" promptText="Your Birthday" />
+      <JFXButton fx:id="image" layoutX="5.0" layoutY="395.0" mnemonicParsing="false" onAction="#imageAction" prefHeight="32.0" prefWidth="186.0" style="-fx-background-color: silver;" text="your picture" />
+      <JFXButton fx:id="Signup" layoutX="8.0" layoutY="441.0" mnemonicParsing="false" onAction="#SignupAction" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: silver;" text="Sign Up" />
+      <TextField fx:id="Email" layoutX="19.0" layoutY="197.0" promptText="Email" />
+      <PasswordField fx:id="Password" layoutX="18.0" layoutY="229.0" promptText="Password" />
+      <PasswordField fx:id="passfield" layoutX="436.0" layoutY="18.0" promptText="password" />
+      <TextField fx:id="city" layoutX="19.0" layoutY="106.0" promptText="Your city" />
+      <TextField fx:id="coutry" layoutX="19.0" layoutY="137.0" promptText="Your country" />
+      <PasswordField fx:id="passwordverif" layoutX="17.0" layoutY="264.0" promptText="Verify Your Password" />
+   </children>
+</AnchorPane>

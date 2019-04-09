@@ -32,6 +32,9 @@ public class Friend implements Serializable {
 
 	public Friend() {
 		super();
+		this.accepted="invitation";
+	this.daterecept= new Timestamp(System.currentTimeMillis());
+
 	}   
 	public Integer getId() {
 		return this.Id;

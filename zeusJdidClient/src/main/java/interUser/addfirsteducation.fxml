@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="375.0" prefWidth="659.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interUser.addfirsteducationController">
+   <children>
+      <ImageView fitHeight="395.0" fitWidth="676.0" layoutX="-17.0" layoutY="13.0" opacity="0.26" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/education.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="195.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" wrappingWidth="167.9830722808838">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Text>
+      <Text layoutX="18.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fourth step: Add your studies !" wrappingWidth="634.0">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Text>
+      <TextField fx:id="namespeciality" layoutX="202.0" layoutY="151.0" prefHeight="25.0" prefWidth="224.0" promptText="name of speciality" />
+      <Button fx:id="addeduc" layoutX="257.0" layoutY="358.0" mnemonicParsing="false" onAction="#addeducAction" text="add this Study" />
+      <Button fx:id="ignoreeduc" layoutX="584.0" layoutY="362.0" mnemonicParsing="false" onAction="#ignoreeducAction" text="Ignore" />
+      <DatePicker fx:id="datedebeduc" layoutX="216.0" layoutY="269.0" promptText="Date start" />
+      <DatePicker fx:id="datefeduc" layoutX="216.0" layoutY="310.0" promptText="date of graduation" />
+      <TextField fx:id="schoolnam" layoutX="202.0" layoutY="191.0" prefHeight="25.0" prefWidth="224.0" promptText="School Name" />
+      <ComboBox fx:id="degreecombo" layoutX="226.0" layoutY="224.0" prefWidth="150.0" promptText="Degree" />
+   </children>
+</AnchorPane>

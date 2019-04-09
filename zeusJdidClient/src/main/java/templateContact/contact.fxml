@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.geometry.*?>
@@ -75,7 +76,7 @@
             <VBox fx:id="vbFriendFollow" prefHeight="436.0" prefWidth="628.0" />
          </content>
       </ScrollPane>
-      <HBox fx:id="myNetworkHB" layoutX="11.0" layoutY="107.0" onMouseClicked="#myNetworkAction" prefHeight="54.0" prefWidth="252.0">
+      <HBox fx:id="myNetworkHB" layoutX="11.0" layoutY="107.0" onMouseClicked="#myNetworkAction" prefHeight="54.0" prefWidth="252.0" style="-fx-background-color: white;">
          <children>
             <ImageView fitHeight="56.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -93,7 +94,7 @@
          <children>
             <ImageView fitHeight="56.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../icons/followBl.png" />
+                  <Image url="@../icons/followBL.png" />
                </image>
             </ImageView>
             <Label prefHeight="58.0" prefWidth="178.0" text="Following">
@@ -107,7 +108,7 @@
          <children>
             <ImageView fitHeight="56.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../icons/sendrequestBl.png" />
+                  <Image url="@../icons/sendrequestBL.png" />
                </image>
             </ImageView>
             <Label prefHeight="58.0" prefWidth="178.0" text="Sent Requests">
@@ -121,7 +122,7 @@
          <children>
             <ImageView fitHeight="56.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../icons/receivedrequestBl.png" />
+                  <Image url="@../icons/receivedequestBl.png" />
                </image>
             </ImageView>
             <Label prefHeight="58.0" prefWidth="178.0" text="Received Requests">
@@ -135,7 +136,7 @@
          <children>
             <ImageView fitHeight="56.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../icons/entrepriseBl.png" />
+                  <Image url="@../icons/umayknowBl.png" />
                </image>
             </ImageView>
             <Label prefHeight="58.0" prefWidth="178.0" text="You May Know">
@@ -149,7 +150,7 @@
          <children>
             <ImageView fitHeight="56.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../icons/umayknowBl.png" />
+                  <Image url="@../icons/entrepriseBl.png" />
                </image>
             </ImageView>
             <Label prefHeight="56.0" prefWidth="198.0" text="Entreprises">

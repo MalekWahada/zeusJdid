@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="1589.0" prefWidth="957.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OtherProfile.otherprofileController">
+   <children>
+      <AnchorPane layoutX="-6.0" layoutY="-1.0" prefHeight="53.0" prefWidth="907.0" style="-fx-background-color: #161626;">
+         <children>
+            <AnchorPane prefHeight="64.0" prefWidth="964.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="123.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/zeus.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="homeImg" fitHeight="45.0" fitWidth="56.0" layoutX="416.0" layoutY="11.0" onMouseClicked="#homeImgClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/homeWh.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="inboxImg" fitHeight="45.0" fitWidth="45.0" layoutX="483.0" layoutY="11.0" onMouseClicked="#inboxImgClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/messageWh.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="jobOfferImg" fitHeight="45.0" fitWidth="45.0" layoutX="557.0" layoutY="11.0" onMouseClicked="#jobOfferImgClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/jobsWh.png" />
+                     </image>
+                  </ImageView>
+                  <JFXTextField fx:id="searchTF" layoutX="190.0" layoutY="19.0" prefHeight="25.0" prefWidth="172.0" style="-fx-text-fill: #ffffff;" />
+                  <ImageView fx:id="notifImg" fitHeight="45.0" fitWidth="45.0" layoutX="619.0" layoutY="9.0" onMouseClicked="#notifImgClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/notifWh.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="contactImg" fitHeight="45.0" fitWidth="45.0" layoutX="755.0" layoutY="11.0" onMouseClicked="#contactImgAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/friendWh.png" />
+                     </image>
+                  </ImageView>
+                  <MenuButton fx:id="dropDownProfile" layoutX="875.0" layoutY="21.0" mnemonicParsing="false" style="-fx-background-color: #80ccff;" text=" ">
+                    <items>
+                      <MenuItem fx:id="seeProfileAction" mnemonicParsing="false" text="see profile" />
+                      <MenuItem fx:id="jobApplications" mnemonicParsing="false" onAction="#jobApplicationsAction" text="See job Applications" />
+                        <MenuItem fx:id="logOut" mnemonicParsing="false" onAction="#logOutAction" text="Log Out" />
+                    </items>
+                  </MenuButton>
+                  <Circle fx:id="profileImg" fill="#becedd" layoutX="854.0" layoutY="35.0" onMouseClicked="#profileImgAction" radius="27.0" stroke="BLACK" strokeType="INSIDE" />
+                  <ImageView fitHeight="24.0" fitWidth="30.0" layoutX="166.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/searchWh.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="statImg" fitHeight="45.0" fitWidth="54.0" layoutX="689.0" layoutY="9.0" onMouseClicked="#statImgAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/statWh.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <ScrollPane layoutY="63.0" prefHeight="1528.0" prefWidth="957.0">
+        <content>
+          <AnchorPane maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="2588.0" prefWidth="960.0">
+               <children>
+                  <Label fx:id="name" layoutX="216.0" layoutY="36.0" prefHeight="54.0" prefWidth="385.0" text="Skander Fathallah">
+                     <font>
+                        <Font name="Arial Italic" size="45.0" />
+                     </font>
+                  </Label>
+                  <Circle fx:id="imageCircle" fill="WHITE" layoutX="112.0" layoutY="104.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label fx:id="birthday" layoutX="242.0" layoutY="104.0" prefHeight="38.0" prefWidth="140.0" text="01/02/1992">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="occupation" layoutX="12.0" layoutY="229.0" prefHeight="48.0" prefWidth="578.0" text="etudiant a faculte sience economique gestion nabeul">
+                     <font>
+                        <Font name="Aparajita" size="34.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane layoutX="23.0" layoutY="365.0" prefHeight="345.0" prefWidth="271.0">
+                     <content>
+                        <VBox fx:id="Skilsvb" prefHeight="344.0" prefWidth="273.0" />
+                     </content>
+                  </ScrollPane>
+                  <Label layoutX="35.0" layoutY="291.0" text="Skills">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="373.0" layoutY="291.0" text="Professional Expirences">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane layoutX="391.0" layoutY="359.0" prefHeight="350.0" prefWidth="451.0">
+                     <content>
+                        <VBox fx:id="expvbox" prefHeight="352.0" prefWidth="453.0" />
+                     </content>
+                  </ScrollPane>
+                  <ScrollPane layoutX="470.0" layoutY="820.0" prefHeight="247.0" prefWidth="451.0">
+                     <content>
+                        <VBox fx:id="expvbox1" prefHeight="261.0" prefWidth="453.0" />
+                     </content>
+                  </ScrollPane>
+                  <Label layoutX="431.0" layoutY="750.0" text=" Academic Background">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="750.0" text="Certifications">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane layoutX="59.0" layoutY="820.0" prefHeight="221.0" prefWidth="271.0">
+                     <content>
+                        <VBox fx:id="Skileduc" prefHeight="225.0" prefWidth="273.0" />
+                     </content>
+                  </ScrollPane>
+                  <VBox fx:id="snedremovec" disable="true" layoutX="636.0" layoutY="142.0" prefHeight="110.0" prefWidth="216.0" visible="false">
+                     <children>
+                        <HBox fx:id="sendmessage" onMouseClicked="#SendMessageAction" prefHeight="55.0" prefWidth="190.0">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/sentmessage.png" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="51.0" prefWidth="150.0" text="Send Message">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="removec" onMouseClicked="#removecAction" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/delete.png" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="55.0" prefWidth="161.0" text="remove this Contact">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox fx:id="addcontact" disable="true" layoutX="216.0" layoutY="180.0" onMouseClicked="#addcontactAction" prefHeight="54.0" prefWidth="182.0" visible="false">
+                     <children>
+                        <ImageView fitHeight="58.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/addc.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="59.0" prefWidth="127.0" text="Add This Contact">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="CancerlInvitation" disable="true" layoutX="216.0" layoutY="180.0" onMouseClicked="#CancerlInvitationAction" prefHeight="54.0" prefWidth="182.0" visible="false">
+                     <children>
+                        <ImageView fitHeight="58.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/delete.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="59.0" prefWidth="127.0" text="Cancel Invitation">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="acceptinvitation" disable="true" layoutX="216.0" layoutY="180.0" onMouseClicked="#acceptinvitationAction" prefHeight="54.0" prefWidth="182.0" visible="false">
+                     <children>
+                        <ImageView fitHeight="58.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/addc.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="59.0" prefWidth="127.0" text="Accept Invitation">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="refuseInvitation" disable="true" layoutX="391.0" layoutY="180.0" onMouseClicked="#refuseInvitationAction" prefHeight="54.0" prefWidth="182.0" visible="false">
+                     <children>
+                        <ImageView fitHeight="58.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/delete.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="59.0" prefWidth="127.0" text="Refuse Invitation">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Label fx:id="oneskillSpecialityname" layoutX="86.0" layoutY="-57.0" prefHeight="29.0" prefWidth="196.0" text="Informatique    JavaEE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="oneskillRAIT" layoutX="20.0" layoutY="-99.0" prefHeight="29.0" prefWidth="223.0" text="LEVEL">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <HBox fx:id="oneskillactions" layoutX="20.0" layoutY="-99.0" prefHeight="38.0" prefWidth="268.0">
+         <children>
+            <ImageView fx:id="updateskill" fitHeight="42.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/crayon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="deleteskill" fitHeight="42.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/delete.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="askrec" fitHeight="42.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/askrec.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="seerec" fitHeight="42.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/seestar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
